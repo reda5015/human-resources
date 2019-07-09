@@ -59,6 +59,7 @@ public class EmployeeController {
         Optional<Employee> employee = employeeRepository.findById(employeeId);
         if (employee.isPresent()) {
             model.addAttribute("employee", employee.get());
+            model.addAttribute("departmentsList", departmentRepository.findAll());
         } else {
             model.addAttribute("noSuchElement", true);
             model.addAttribute("departmentsList", departmentRepository.findAll());

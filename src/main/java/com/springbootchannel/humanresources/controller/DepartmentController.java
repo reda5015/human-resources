@@ -62,6 +62,7 @@ public class DepartmentController {
         Optional<Department> department = departmentRepository.findById(departmentId);
         if (department.isPresent()) {
             model.addAttribute("department", department.get());
+            model.addAttribute("companiesList", companyRepository.findAll());
         }
         else
         {

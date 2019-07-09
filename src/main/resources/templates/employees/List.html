@@ -68,6 +68,7 @@
             <th scope="col">Employee Name</th>
             <th scope="col">Salary</th>
             <th scope="col">Department Name</th>
+            <th scope="col">Company Name</th>
 
         </tr>
         </thead>
@@ -88,7 +89,11 @@
 
                 </a>
             </td>
+            <td>
+                <a th:href="@{'/companies/' + ${employee.department.company.getId()}}" th:text="${employee.department.company.name}">
 
+                </a>
+            </td>
         </tr>
         </tbody>
     </table>

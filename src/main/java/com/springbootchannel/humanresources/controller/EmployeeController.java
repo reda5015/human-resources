@@ -51,7 +51,7 @@ public class EmployeeController {
         }
         employeeRepository.save(employee);
         redirectAttributes.addFlashAttribute("savedSuccessfully", true);
-        return "redirect:/employees//";
+        return "redirect:/employees/";
     }
 
     @RequestMapping("{employeeId}")
